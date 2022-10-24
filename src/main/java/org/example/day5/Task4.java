@@ -15,24 +15,16 @@ public class Task4 {
 
         int max = 0;
         int startIndex = 0;
+        for (int i = 0; i < array.length - 2; i++) {
+            int sum = 0;
 
-        for (int i = 0; i < array.length; i++) {
-            int maxer = 0;
-            int start = 0;
-
-            if (i == 0) {
-                maxer = array[i] + array[i+1] + array[i+2];
-            } else if (i == 99) {
-                maxer = array[i] + array[i-1] + array[i-2];
-                start = i-2;
-            } else {
-                maxer = array[i] + array[i-1] + array[i+1];
-                start = i-1;
+            for (int j = i; j < i + 3; j++) {
+                sum += array[j];
             }
 
-            if (maxer > max) {
-                max = maxer;
-                startIndex = start;
+            if (sum > max) {
+                max = sum;
+                startIndex = i;
             }
         }
         System.out.println("max " + max);
