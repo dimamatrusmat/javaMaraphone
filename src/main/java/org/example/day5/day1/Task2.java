@@ -1,9 +1,9 @@
-package org.example.day1;
+package org.example.day5.day1;
 
-public class Task3 {
+public class Task2 {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
-            System.out.println("JAVA");
+            System.out.print("Java ");
         }
     }
 }

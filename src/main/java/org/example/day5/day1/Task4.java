@@ -1,4 +1,4 @@
-package org.example.day1;
+package org.example.day5.day1;
 
 public class Task4 {
     public static void main(String[] args) {
