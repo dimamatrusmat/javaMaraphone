@@ -27,6 +27,7 @@ public class Task2 {
         int maxCount = 50;
 
         double [] answ = new double[maxCount];
+
         int counter = 0;
         int countSum = 0;
         int countNum = 0;
@@ -35,13 +36,14 @@ public class Task2 {
             countSum += Integer.parseInt(i);
             counter++;
 
-            if (counter == (maxCount-1)) {
-
-                answ[countNum++] = (double) countSum / maxCount;
+            if (counter == (20)) {
+                System.out.println(countNum);
+                answ[countNum++] = (double) countSum / 20;
                 countSum = 0;
                 counter = 0;
             }
         }
+
         String toFile2 = Arrays.toString(answ).replace(",", "");
         pw.println(toFile2.substring(1,toFile2.length()-1));
 

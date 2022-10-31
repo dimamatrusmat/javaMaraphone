@@ -22,9 +22,8 @@ public class Task1 {
             ans += i;
         }
         System.out.println(ans);
-        DecimalFormat df = new DecimalFormat("#.000");
         System.out.println(count);
         double answer = (double) ans/count;
-        System.out.println(answer+ " - " +  df.format(answer));
+        System.out.printf(answer+ " - " + "%.3f", answer);
     }
 }
