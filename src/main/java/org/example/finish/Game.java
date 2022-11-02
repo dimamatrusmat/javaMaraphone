@@ -43,8 +43,9 @@ public class Game {
         System.out.println("Отлично все коробли поставлены!");
 
         while (true) {
-            if (!whoWin(player1, player2)) {
+            if (!whoWin(player1, player2, board1, board2)) {
                 System.out.println("Спасибо за игру!");
+                break;
             } else {
                 System.out.println("Продолжаем)");
 
@@ -70,11 +71,12 @@ public class Game {
         } else {
             System.out.println(board.attach(cords));
         }
+        board.print();
     }
 
     public static void addShip (Board board, Scanner scanner) {
-        int size = 4;
-        int count = 1;
+        int size = 1;
+        int count = 2;
 
         while (size != 0) {
             boolean counting = false;

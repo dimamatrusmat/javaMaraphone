@@ -20,6 +20,10 @@ public enum Symbool {
         visible = true;
     }
 
+    public void foVisisble() {
+        visible = false;
+    }
+
     public String getText() {
         return text;
     }

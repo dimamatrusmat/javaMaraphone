@@ -52,6 +52,7 @@ public class Board {
     }
 
     public void setSymbool(int [] arr, Symbool sb) {
+        sb.foVisisble();
         boardBo[arr[0]][arr[1]] = sb;
     }
 
@@ -68,14 +69,16 @@ public class Board {
     }
 
     public int[] cheackStr (String str) {
-        if (str.equals(',')) {
-            String [] arg = str.split(",");
+        String [] arg = str.split(",");
+
+        if (arg.length == 2) {
             int a = Integer.parseInt(arg[0]);
             int b = Integer.parseInt(arg[1]);
-            return new int [] {a, b};
-        } else  {
-            return new int [] {99, 99};
+            return new int[]{a, b};
+        } else {
+            return new int[]{99, 99};
         }
+
     }
 
 

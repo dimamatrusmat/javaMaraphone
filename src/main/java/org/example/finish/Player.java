@@ -27,13 +27,14 @@ public class Player {
         return score;
     }
 
-    public static boolean whoWin(Player player1, Player player2) {
-        if (player1.getScore() == 20) {
-            System.out.println("Победил " + player1);
+    public static boolean whoWin(Player player1, Player player2, Board board1, Board board2) {
+
+        if (player1.getScore() == board1.getShips().size()) {
+            System.out.println("Победил " + player1.getName());
 
             return false;
-        } else if (player2.getScore() == 20) {
-            System.out.println("Победил " + player2);
+        } else if (player2.getScore() == board2.getShips().size()) {
+            System.out.println("Победил " + player2.getName());
 
             return false;
         }
